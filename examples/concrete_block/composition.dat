@@ -1,0 +1,34 @@
+; Composition file
+;
+Newdevice composition			; Device type
+Composition			; Device name
+
+Phase PMMA	; PMMA (Polymethyl methacrylate)
+NElem 3		; Number of atomic species for phase 0
+1   8.05	; Atomic number, weight percent of element 0
+6   59.99	; Atomic number, weight percent of element 1
+8   31.96	; Atomic number, weight percent of element 2
+Rho 1.19	; mass density of the phase (g/cm3)
+
+
+Phase concrete
+NElem 10
+1 0.022100
+6 0.002484
+8 0.574930
+11 0.015208
+12 0.001266
+13 0.019953
+14 0.304627
+19 0.010045
+20 0.042951
+26 0.006435
+Rho 2.3
+
+Phase aluminium
+NElem 1
+13 100
+Rho 2.699
+
+
+End

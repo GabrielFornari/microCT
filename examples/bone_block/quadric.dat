@@ -1,0 +1,28 @@
+; Quadric array file
+;
+Newdevice quadricarray				; Device type
+QuadricArray				; Device name
+
+; -----------------------------------------------------------------
+;Rectangle
+Plane R1
+0 0 4.001 0 0 1
+Plane R2
+0 3 0 0 1 0
+Plane R3
+3 0 0 1 0 0
+Plane R4
+0 0 -4.001 0 0 -1
+Plane R5
+0 -3 0 0 -1 0
+Plane R6
+-3 0 0 -1 0 0
+
+;Sphere
+Ellipsoid E1
+0 0 0 2 2 2
+
+; Rotation of all previous quadrics (rotation axis x0, u, theta)
+RotateAll 0 0 0 0 0 1 0 ; around z
+
+End

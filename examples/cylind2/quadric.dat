@@ -1,0 +1,59 @@
+; Quadric array file
+;
+Newdevice quadricarray				; Device type
+QuadricArray				; Device name
+
+; -----------------------------------------------------------------
+;Rectangle
+Plane R1
+0 0 4.001 0 0 1
+Plane R2
+0 2 0 0 1 0
+Plane R3
+2 0 0 1 0 0
+Plane R4
+0 0 -4.001 0 0 -1
+Plane R5
+0 -2 0 0 -1 0
+Plane R6
+-2 0 0 -1 0 0
+
+; -----------------------------------------------------------------
+;internal (empty) cylinder #1
+CylinderZ CZ3		; cylinder:
+0 0 0.1 0.1			; axis x0, y0, ellipt. section semiaxes Rx, Ry
+
+Rotate 0 0 0 1 0 0 5
+Rotate 0 0 0 0 1 0 10
+Rotate 0 0 0 0 0 1 15
+
+;internal (empty) cylinder #2
+CylinderZ CZ4		; cylinder:
+0.4 0.4 0.1 0.1			; axis x0, y0, ellipt. section semiaxes Rx, Ry
+
+Rotate 0 0 0 1 0 0 -10
+Rotate 0 0 0 0 1 0 -5
+Rotate 0 0 0 0 0 1 -20
+
+;internal (empty) cylinder #3
+CylinderZ CZ5		; cylinder:
+-0.7 0 0.1 0.1			; axis x0, y0, ellipt. section semiaxes Rx, Ry
+
+Rotate 0 0 0 1 0 0 -20
+Rotate 0 0 0 0 1 0 5
+Rotate 0 0 0 0 0 1 -15
+
+; -----------------------------------------------------------------
+; Limit of the cylinders (they should be a bit smaller than the rectangle)
+Plane P5		; upper base plane:
+0  0  4  0  0  1	; point x0, y0, z0, normal vect. ux, uy, uz
+Plane  P6      		; lower base plane:
+0  0 -4  0  0 -1	; point x0, y0, z0, normal vect. ux, uy, uz
+
+
+; Rotation of all previous quadrics (rotation axis x0, u, theta)
+RotateAll 0 0 0 1 0 0 30 ; 30 deg around x
+RotateAll 0 0 0 0 1 0 20 ; 20 deg around y
+RotateAll 0 0 0 0 0 1 0 ; around z
+
+End

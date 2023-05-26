@@ -1,0 +1,19 @@
+; 3D object geometric description file
+;
+Newdevice geom3d				; Device type
+Geom3D				; Device name
+QArrName QuadricArray		; Quadric array input device name
+CompName Composition            ; Composition input device name
+
+
+Object Rect1
+Water Vacuum
+6
+R1 R2 R3 R4 R5 R6
+
+Object Sphere1
+Bone Water
+1
+E1
+
+End

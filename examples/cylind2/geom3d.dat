@@ -1,0 +1,29 @@
+; 3D object geometric description file
+;
+Newdevice geom3d				; Device type
+Geom3D				; Device name
+QArrName QuadricArray		; Quadric array input device name
+CompName Composition            ; Composition input device name
+
+Object wire1
+aluminium concrete			; Phase in, phase out
+3				; Number of quadrics
+CZ3 P5 P6			; Quadric names
+
+Object wire2
+aluminium concrete			; Phase in, phase out
+3				; Number of quadrics
+CZ4 P5 P6			; Quadric names
+
+Object wire3
+aluminium concrete			; Phase in, phase out
+3				; Number of quadrics
+CZ5 P5 P6			; Quadric names
+
+
+Object Rect1
+concrete Vacuum
+6
+R1 R2 R3 R4 R5 R6
+
+End
