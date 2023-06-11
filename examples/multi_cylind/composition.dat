@@ -1,0 +1,78 @@
+; Composition file
+;
+Newdevice composition			; Device type
+Composition			; Device name
+
+Phase PMMA	; PMMA (Polymethyl methacrylate)
+NElem 3		; Number of atomic species for phase 0
+1   8.05	; Atomic number, weight percent of element 0
+6   59.99	; Atomic number, weight percent of element 1
+8   31.96	; Atomic number, weight percent of element 2
+Rho 1.19	; mass density of the phase (g/cm3)
+
+
+Phase Adipose
+NElem 7
+1 0.114000
+6 0.598000
+7 0.007000
+8 0.278000
+11 0.001000
+16 0.001000
+17 0.001000
+Rho 9.5e-1
+
+Phase Bone
+NElem 9
+1: 0.034000
+6: 0.155000
+7: 0.042000
+8: 0.435000
+11: 0.001000
+12: 0.002000
+15: 0.103000
+16: 0.003000
+20: 0.225000
+Rho 1.92
+
+Phase Muscle
+NElem 9
+1 0.102000
+6 0.143000
+7 0.034000
+8 0.710000
+11 0.001000
+15 0.002000
+16 0.003000
+17 0.001000
+19 0.004000
+Rho 1.05
+
+Phase Blood
+NElem 10
+1: 0.102000
+6: 0.110000
+7: 0.033000
+8: 0.745000
+11: 0.001000
+15: 0.001000
+16: 0.002000
+17: 0.003000
+19: 0.002000
+26: 0.001000
+Rho 1.06
+
+Phase Lung
+NElem 9
+1 0.103000
+6 0.105000
+7 0.031000
+8 0.749000
+11 0.002000
+15 0.002000
+16 0.003000
+17 0.003000
+19 0.002000
+Rho 1.05
+
+End
