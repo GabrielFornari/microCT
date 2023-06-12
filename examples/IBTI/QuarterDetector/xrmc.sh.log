@@ -1,0 +1,173 @@
+xrmc (X-ray Monte Carlo)
+Software for X-ray imaging and spectroscopy experiment simulation
+based on Monte Carlo method with variance reduction techniques
+Authors:
+B. Golosio, T. Schoonjans, A. Brunetti, P. Oliva, G. L. Masala
+Università degli Studi di Sassari
+
+Please cite our manuscript "Monte Carlo simulation of X-ray imaging
+and spectroscopy experiments using quadric geometry and variance
+reduction techniques", Computer Physics Communications, 185:1044-1052, 2013.
+DOI: http://dx.doi.org/10.1016/j.cpc.2013.10.034
+
+Please refer to the manual for usage conditions and instructions
+-----------------------------------------------------------------
+
+input.dat
+Start simulation...
+Files used by the simulation: input.dat
+Device file: source.dat
+Device type: source
+Device name: Source
+Source position/orientation file
+Spectrum input device name: Spectrum
+Source position :	(0;-100;0)
+Source orientation :
+	uk vector (local z axis, main source direction):	(0;1;0)
+Source orientation :
+	ui vector (local x axis direction):	(-1;0;0)
+Beam divergence (thetax, thetay): 0.1	0.1
+Source size (sigmax, sigmay, sigmaz in local source coordinate system):
+0.05, 0.05, 0.05
+Device file: detector.dat
+Device type: detectorarray
+Device name: DetectorArray
+Detector Array parameters, position, orientation and size file
+Source input device name: Sample
+Pixel number (NX x NY): 400 x 400
+Pixel size (Sx x Sy) (cm): 0.03 x 0.03
+Detector elements shape (0 rectangular/1 elliptical): 0
+Cut on solid angle from interaction point to a single pixel: 0.01
+Detector array center position :	(0;15;0)
+Detector orientation :
+	uk vector:	(0;-1;0)
+Detector orientation :
+	ui vector:	(1;0;0)
+Exposure Time (s): 1
+Multiplicity of simulated events per pixel: 1
+Enable random point on pixels (0/1): 1
+Enable Poisson statistic on pixel counts (0/1): 0
+Round pixel counts to integer (0/1): 0
+Use header in output file (0/1): 1
+Pixel content type: 0
+0: fluence, 1: energy fluence, 2: fluence(E), 3: energy fluence(E)
+Seeds for random number generation
+	Number of seeds: 10
+	Thread n. 0 , Seed: 123450
+	Thread n. 1 , Seed: 123451
+	Thread n. 2 , Seed: 123452
+	Thread n. 3 , Seed: 123453
+	Thread n. 4 , Seed: 123454
+	Thread n. 5 , Seed: 123455
+	Thread n. 6 , Seed: 123456
+	Thread n. 7 , Seed: 123457
+	Thread n. 8 , Seed: 123458
+	Thread n. 9 , Seed: 123459
+Device file: spectrum.dat
+Device type: spectrum
+Device name: Spectrum
+Spectrum File
+Unpolarized beam
+Loop on all lines and sampling points
+Number of samples for each interval in the continuous spectrum: 1
+Number of samples for each line in the spectrum: 1
+Random energy in intervals enabled
+Number of lines in the spectrum: 1
+Energy Lines :
+50	0	1e+10
+Device file: sample.dat
+Device type: sample
+Device name: Sample
+Sample parameters file
+Source input device name: Source
+Geom3D input device name: Geom3D
+Composition input device name: Composition
+Weighted step length (0/1): 1
+Activate Fluorescence (0/1): 0
+Maximum scattering order: 0
+Multiplicity of simulated events for scattering order 0: 1
+Device file: quadric.dat
+Device type: quadricarray
+Device name: QuadricArray
+Quadric array file
+CylinderZ CZ1
+	xc: 0	0
+	a: 3	3
+Plane P1
+	xc: 0	0	4.001
+	a: 0	0	1
+Plane P2
+	xc: 0	0	-4.001
+	a: 0	0	-1
+CylinderZ CZ2
+	xc: 0	0
+	a: 2	2
+Plane P3
+	xc: 0	0	4
+	a: 0	0	1
+Plane P4
+	xc: 0	0	-4
+	a: 0	0	-1
+RotateAll
+	xc: 0	0	0
+	u: 0	1	0
+	theta: 20
+RotateAll
+	xc: 0	0	0
+	u: 1	0	0
+	theta: 30
+Device file: geom3d.dat
+Device type: geom3d
+Device name: Geom3D
+Geometric shapes file
+Quadric array input device name: QuadricArray
+Composition input device name: Composition
+Object: Cyl1
+	Phase Inside: PMMA
+	Phase Outside: Vacuum
+	Num. of quadrics: 3
+	Quadric: CZ1
+	Quadric: P1
+	Quadric: P2
+Object: Cyl2
+	Phase Inside: Vacuum
+	Phase Outside: PMMA
+	Num. of quadrics: 3
+	Quadric: CZ2
+	Quadric: P3
+	Quadric: P4
+Device file: composition.dat
+Device type: composition
+Device name: Composition
+Composition file
+Phase: PMMA
+Num. of compounds: 3
+	Z	weight fract.
+	1	0.0805
+	6	0.5999
+	8	0.3196
+	Rho: 1.19
+Run device: DetectorArray
+Total Continuous Intensity: 0
+Maximum Continuous Intensity: 0
+Total Discrete Intensity: 1e+10
+Omega: 0.03138976
+Compton profile icdf for element: 1
+Compton profile icdf for element: 6
+Compton profile icdf for element: 8
+Maximum number of threads: 8
+	Thread 0 , seed 123450
+	Thread 1 , seed 123451
+	Thread 2 , seed 123452
+	Thread 3 , seed 123453
+	Thread 4 , seed 123454
+	Thread 5 , seed 123455
+	Thread 6 , seed 123456
+	Thread 7 , seed 123457
+
+Progress 0 %Progress 31.250 %Progress 31.250 %Progress 62.500 %Progress 93.750 %Progress 100.000 %
+Save from device: DetectorArray data name: Image to file image.dat
+Saving data: Image
+Output File: image.dat
+Elapsed time: 1 sec
+Elapsed CPU time: 1.753822 sec

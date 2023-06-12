@@ -1,0 +1,45 @@
+; 3D object geometric description file
+;
+Newdevice geom3d				; Device type
+Geom3D				; Device name
+QArrName QuadricArray		; Quadric array input device name
+CompName Composition            ; Composition input device name
+
+; Object 1: external cilinder
+Object Cyl1
+PMMA Vacuum			; Phase in, phase out
+3				; Number of quadrics
+CZ1 P1 P2			; Quadric names
+
+; Object 2: internal (empty) cilinder
+Object Cyl2
+Vacuum PMMA		; Phase in, phase out
+3				; Number of quadrics
+CZ2 P3 P4		; Quadric names
+
+; Object 3: internal (left) cilinder
+Object Cyl3
+Aluminium PMMA	; Phase in, phase out
+3				; Number of quadrics
+CZ3 P3 P4		; Quadric names
+
+; Object 4: internal (right) cilinder
+Object Cyl4
+Aluminium PMMA	; Phase in, phase out
+3				; Number of quadrics
+CZ4 P3 P4		; Quadric names
+
+; Object 5: internal (bottom) cilinder
+Object Cyl5
+Aluminium PMMA	; Phase in, phase out
+3				; Number of quadrics
+CZ5 P3 P4		; Quadric names
+
+; Object 6: internal (top) cilinder
+Object Cyl6
+Aluminium PMMA	; Phase in, phase out
+3				; Number of quadrics
+CZ6 P3 P4		; Quadric names
+
+
+End

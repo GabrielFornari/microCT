@@ -1,0 +1,30 @@
+; Composition file
+;
+Newdevice composition			; Device type
+Composition			; Device name
+
+Phase PMMA	; PMMA (Polymethyl methacrylate)
+NElem 3		; Number of atomic species for phase 0
+1   8.05	; Atomic number, weight percent of element 0
+6   59.99	; Atomic number, weight percent of element 1
+8   31.96	; Atomic number, weight percent of element 2
+Rho 1.00	; mass density of the phase (g/cm3)
+
+Phase Aluminium	; Al
+NElem 1		    ; Number of atomic species for phase 0
+13   100.0	    ; Atomic number, weight percent of element 2
+Rho 2.6989	    ; mass density of the phase (g/cm3)
+
+Phase Bone ; Nist Data, semelhantes ao GATE
+NElem 8
+1	6.3984 ; Hydrogen
+6	27.8000 ; Carbon
+7	2.7000 ; Nitrogen
+8	41.0016 ; Oxygen
+12	0.2000 ; Magnesium
+15	7.0000 ; Phosporous
+16	0.2000 ; Sulfur
+20	14.7000 ; Calcium
+Rho 1.85000
+
+End
