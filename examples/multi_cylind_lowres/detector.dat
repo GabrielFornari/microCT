@@ -3,8 +3,8 @@
 Newdevice detectorarray			; Device type
 DetectorArray			; Device name
 SourceName Sample		; Source input device name
-NPixels 768 128			; Pixel number (NX x NY)
-PixelSize 0.011 0.011		; Pixel Size (cm)
+NPixels 200 150			; Pixel number (NX x NY)
+PixelSize 0.02 0.02		; Pixel Size (cm)
 Shape 0	       			; Pixel shape (0 rectangular, 1 elliptical)
 dOmegaLim 1e-2			; Cut on dOmega (default = 2*PI)
 X	0	5	0	; screen x, y, z
