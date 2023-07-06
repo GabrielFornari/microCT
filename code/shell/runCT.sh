@@ -15,7 +15,8 @@ do
    
    xrmc input.dat >/dev/null
    
-   imgName="img_$currentAngle.dat"
+   imgName="img_$(printf %04d $currentAngle).dat"
+
    mv image.dat $folderOutput/$imgName
 
    currentAngle=$((currentAngle+anglePace))

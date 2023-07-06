@@ -5,64 +5,41 @@ Geom3D				; Device name
 QArrName QuadricArray		; Quadric array input device name
 CompName Composition            ; Composition input device name
 
-; External cilinder
+; Object 1: external cilinder
 Object Cyl1
 PMMA Vacuum			; Phase in, phase out
 3				; Number of quadrics
-C1 P1 P2			; Quadric names
+CZ1 P1 P2			; Quadric names
 
-; Internal cilinder 1 (bottom)
-Object IntCyl1
-Bone PMMA
-3
-IC1 P3 P4
-
-; Internal cilinder 2 (bottom right)
-;Object IntCyl2
-;Bone PMMA
-;3
-;IC2 P3 P4
-
-; Internal cilinder 3 (right)
-Object IntCyl3
-Bone PMMA
-3
-IC3 P3 P4
-
-; Internal cilinder 4 (top right)
-;Object IntCyl4
-;Bone PMMA
-;3
-;IC4 P3 P4
-
-; Internal cilinder 5 (top)
-Object IntCyl5
-Bone PMMA
-3
-IC5 P3 P4
-
-; Internal cilinder 6 (top left)
-;Object IntCyl6
-;Bone PMMA
-;3
-;IC6 P3 P4
-
-; Internal cilinder 7 (left)
-Object IntCyl7
-Bone PMMA
-3
-IC7 P3 P4
-
-; Internal cilinder 8 (botttom left)
-;Object IntCyl8
-;Bone PMMA
-;3
-;IC8 P3 P4
-
-; Internal cilinder 9 (center)
-Object IntCyl9
-Vacuum PMMA			; Phase in, phase out
+; Object 2: internal (empty) cilinder
+Object Cyl2
+Vacuum PMMA		; Phase in, phase out
 3				; Number of quadrics
-IC9 P3 P4			; Quadric names
+CZ2 P3 P4		; Quadric names
+
+; Object 3: internal (left) cilinder
+Object Cyl3
+Bone PMMA	; Phase in, phase out
+3				; Number of quadrics
+CZ3 P3 P4		; Quadric names
+
+; Object 4: internal (right) cilinder
+;Object Cyl4
+;Bone PMMA	; Phase in, phase out
+;3				; Number of quadrics
+;CZ4 P3 P4		; Quadric names
+
+; Object 5: internal (bottom) cilinder
+Object Cyl5
+Bone PMMA	; Phase in, phase out
+3				; Number of quadrics
+CZ5 P3 P4		; Quadric names
+
+; Object 6: internal (top) cilinder
+;Object Cyl6
+;Bone PMMA	; Phase in, phase out
+;3				; Number of quadrics
+;CZ6 P3 P4		; Quadric names
+
 
 End
